@@ -27,23 +27,23 @@
             <div class="menu">
 
                 <ul>
-                    <a href="#renvoiAcceuil">
-                        <li>Acceuil</li>
+                    <a href="#acceuil" class="active">
+                        Acceuil
                     </a>
-                    <a href="#renvoiComp">
-                        <li>Mes compétences</li>
+                    <a href="#competences">
+                        Mes compétences
                     </a>
-                    <a href="#renvoiParcours">
-                        <li>Mon parcours</li>
+                    <a href="#parcours">
+                        Mon parcours
                     </a>
-                    <a href="#renvoiContact">
-                        <li>Contact</li>
+                    <a href="#contact">
+                        Contact
                     </a>
+                </ul>
 
             </div>
 
 
-            </ul>
 
         </nav>
 
@@ -53,13 +53,15 @@
 
     <!----------------- SECTION 1 -------------------->
 <main>
+<!--  -->
 
+    <section id="acceuil">
+        <div class="container reveal">
 
-    <section class="projects">
-        <div class="vide"></div>
-        <h1 id="titre">Developpeur Web Full Stack</h1>
-    <p></p>
-       <div >
+            <div class="vide"></div>
+            <h1 id="titre">Developpeur Web Full Stack</h1>
+            <p></p>
+            <div >
         <div id="vba" class="animate__animated animate__zoomIn"><h2>VBA</h2></div>
         <div id="projet"><h3>Le café de la place</h3></div>
         <div class="animate__animated animate__zoomIn" id="divyellow"><h2>PHP</h2><h2>LARAVEL</h2></div>
@@ -77,28 +79,39 @@
         <div id="projet"><h3>Air' Guitar</h3></div>
         <div class="animate__animated animate__zoomIn" id="divpink"><h2>HTML</h2><h2>CSS</h2><h2>SASS</h2></div>
     </div>
-   
+    
+</div>
 
 
     </section>
     <!----------------- /SECTION 1 -------------------->
 
     <!----------------- SECTION COMPETENCES -------------------->
-    <section class="competences">
-        <div id="renvoiComp">
+    <section id="competences">
+        <div class="reveal">
             <div class="titre1">
                 <img width="30px" height="30px" src="/images/LogofondBeige.png" alt="">
                 <h4>Mes compétences</h4>
+            </div>
+            <div class="block2">
+                <h5>VUE JS</h5>
+                <p>Computed properties, watchers, liaisons bi-directionnelles, modifiers, methods, components, props, hook, data, requetes asynchrones, ...</p>
+                <h5>JAVASCRIPT</h5>
+                <p>Boucles algorithmiques, fonctions, évènements, API, Local Storage, POO, Prototype, ...</p>
+                
+                 <p><i class="fa-solid fa-display"></i> Ma réalisation JAVASCRIPT : <a  id="bgyellow" href="https://github.com/Mathilde89/Le-cafe-de-la-place">La café de la place</a></p>
+                 <p><i class="fa-solid fa-display"></i> Ma réalisation JAVASCRIPT/VUEJS: <a id="bgpink" href="https://github.com/Mathilde89/TheFoodBook">Réseau social - The FoodBook</a></p>
+
             </div>
             <div class="block1">
                 <h5>SASS</h5>
                 <p>Utlisation du SASS pour une meilleure organisation du code</p>
                 <h5>CSS</h5>
-                <p>Sélecteur, style, position, flexbox, boostrap, responsive, petites animations (befOre, after), media query, ...</p>
+                <p>Sélecteur, style, position, flexbox, boostrap, responsive, petites animations (before, after), media query, ...</p>
                 
                 <h5>HTML</h5>
                 <p>Balises, image, ul/ol, li, formulaire, input ...</p>
-                <i class="fa-solid fa-display"></i><p>Ma premiere réalisation HTML/CSS: <a href="https://github.com/Mathilde89/Air-Guitar">Site Air' Guitar</a></p>
+                <p><i class="fa-solid fa-display"></i> Ma premiere réalisation HTML/CSS: <a id="bggreen" href="https://github.com/Mathilde89/Air-Guitar">Site Air' Guitar</a></p>
 
             </div>
         </div>
@@ -110,8 +123,8 @@
     <!----------------- /SECTION COMPETENCES -------------------->
 
     <!----------------- SECTION PARCOURS -------------------->
-    <section class="parcours">
-        <div id="renvoiParcours">
+    <section  id="parcours">
+        <div class="reveal">
             <div class="titre1">
                 <img width="30px" height="30px" src="/images/LogofondBeige.png" alt="">
                 <h4>Mon parcours</h4>
@@ -126,10 +139,10 @@
     <!----------------- /SECTION PARCOURS -------------------->
 
     <!----------------- SECTION CONTACT -------------------->
-    <section class="contact">
+    <section id="contact">
 
 
-        <div id="renvoiContact">
+        <div class="reveal" >
             <div class="titre1">
                 <img width="30px" height="30px" src="/images/LogofondBeige.png" alt="">
                 <h4>Contact</h4>

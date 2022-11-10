@@ -10,6 +10,7 @@ $colorgreydark: #393839;
 
 * {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 
 }
 
@@ -44,7 +45,7 @@ nav {
 
         ;
 
-        li {
+        a {
             margin-left: 1.5em;
             margin-right: 1.5em;
 
@@ -53,17 +54,7 @@ nav {
     }
 }
 
-li a {
-    text-decoration: none;
-    line-height: 70px;
-    padding: 0 10px;
-    text-align: center;
-    font-size: 1.3em;
-    color: #444444;
-    text-transform: uppercase;
-}
-
-a li:after {
+a:after, a.active:after {
     content: '';
     display: block;
     margin: auto;
@@ -73,7 +64,7 @@ a li:after {
     transition: width .5s ease, background-color .5s ease;
 }
 
-a li:hover:after {
+a:hover:after, a.active:after{
     width: 100%;
     background: #444;
 }
@@ -109,7 +100,7 @@ a {
     align-items: center;
 }
 
-.projects {
+.container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -290,9 +281,41 @@ button:hover:after {
     }
 }
 
-.block1{
+.block1, .block2{
     display: flex;
     flex-direction: column;
     padding-left: 100px ;
     
+    p{
+        margin-bottom: 10px;
+    
+    
+    }
+    h5{
+        margin-bottom: 0px;
+    
+    }
 }
+
+#bgyellow{
+    background-color: $coloryellow;
+}
+#bgpink{
+    background-color: $colorpink;
+    color:$colorgreymedium
+}
+#bggreen{
+    background-color: $colorgreen;
+}
+
+// .reveal {
+//     position: relative;
+//     transform: translateY(150px);
+//     opacity: 1;
+//     transition: 2s all ease;
+//   }
+  
+//   .reveal.active {
+//     transform: translateY(0);
+//     opacity: 1;
+//   }
