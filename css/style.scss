@@ -158,9 +158,23 @@ a {
     .divtof{
         background-image: url(/images/photoprofil.jpg);
         background-position: center;
-        background-size: cover;
-        
+        background-size: cover;  
     
+    }
+    .cafe2{
+        background-image: url(/images/cafe.jpg);
+        background-position: center;
+        background-size: cover;  
+    }
+    .todo2{
+        background-image: url(/images/todo.jpg);
+        background-position:center;
+        background-size: cover;  
+    }
+    .matrix2{
+        background-image: url(/images/Matrix.jpg);
+        background-position:center;
+        background-size: cover;  
     }
 
 }
@@ -176,11 +190,11 @@ a {
     
 }
 
-#projet:hover{
-    animation: flipOutY; /* referring directly to the animation's @keyframe declaration */
-    animation-duration: 2s; /* don't forget to set a duration! */
+// #projet:hover{
+//     animation: flipOutY; /* referring directly to the animation's @keyframe declaration */
+//     animation-duration: 2s; /* don't forget to set a duration! */
 
-}
+// }
 
 main {
     background-color: $colorgreylight;

@@ -122,6 +122,21 @@ a {
   background-position: center;
   background-size: cover;
 }
+.container .cafe2 {
+  background-image: url(/images/cafe.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.container .todo2 {
+  background-image: url(/images/todo.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.container .matrix2 {
+  background-image: url(/images/Matrix.jpg);
+  background-position: center;
+  background-size: cover;
+}
 
 #vba {
   background-color: #D9D9D9;
@@ -129,13 +144,6 @@ a {
 
 #projet {
   background-color: #D9D9D9;
-}
-
-#projet:hover {
-  -webkit-animation: flipOutY;
-          animation: flipOutY; /* referring directly to the animation's @keyframe declaration */
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s; /* don't forget to set a duration! */
 }
 
 main {

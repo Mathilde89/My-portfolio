@@ -1,32 +1,32 @@
 ////////////////////////////////////////////////////////////////////////////
 //Animation pour le texte de présentation
-const texte="En reconversion professionnelle en tant que developpeuse web, je vous présente mes compétences et mes projets réalisés :"
+const texte = "En reconversion professionnelle en tant que developpeuse web, je vous présente mes compétences et mes projets réalisés :"
 // const texte="depuis"
 const newtableau = texte.split('')
 const para = document.querySelector('p')
 
 
-let moveTexte=""
-let i=0;
-let randomSpeed=100
+let moveTexte = ""
+let i = 0;
+let randomSpeed = 100
 
-setInterval(function(){
-    
- 
-if(i<= newtableau.length-1){
-    moveTexte=moveTexte+newtableau[i]       
+setInterval(function () {
+
+
+  if (i <= newtableau.length - 1) {
+    moveTexte = moveTexte + newtableau[i]
     para.innerHTML = moveTexte
-//  console.log(i)
-//  console.log(newtableau[i] )
+    //  console.log(i)
+    //  console.log(newtableau[i] )
     i++
-} else{
-    moveTexte="En reconversion professionnelle en tant que developpeuse web, je vous présente mes compétences et mes projets réalisés :"
+  } else {
+    moveTexte = "En reconversion professionnelle en tant que developpeuse web, je vous présente mes compétences et mes projets réalisés :"
 
-    
 
-}    
 
-},randomSpeed)
+  }
+
+}, randomSpeed)
 
 ////////////////////////////////////////////////////////////////////////////
 //Animation pour souligner le menu sur le scroll
@@ -54,22 +54,50 @@ window.onscroll = () => {
 }
 
 function reveal() {
-    var reveals = document.querySelectorAll(".reveal");
-  
-    for (var i = 0; i < reveals.length; i++) {
-      var windowHeight = window.innerHeight;
-      var elementTop = reveals[i].getBoundingClientRect().top;
-      var elementVisible = 150;
-  
-      if (elementTop < windowHeight - elementVisible) {
-        reveals[i].classList.add("active");
-      } else {
-        reveals[i].classList.remove("active");
-      }
+  var reveals = document.querySelectorAll(".reveal");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
     }
   }
-  
-  window.addEventListener("scroll", reveal);
-  
-  // To check the scroll position on page load
-  reveal();
+}
+
+window.addEventListener("scroll", reveal);
+
+// To check the scroll position on page load
+reveal();
+
+
+////////////////////////////////////////////////////////////////////////////
+//Animation les projets
+
+//Fontion animation des projets
+function animationprojets(class1, class2, animOut, animIn) {
+  const rectoClass = document.querySelector(class1);
+  const versoClass = document.querySelector(class2)
+
+  versoClass.style.display = 'none'
+  rectoClass.addEventListener('mouseenter', () => {
+
+    rectoClass.classList.add('animate__animated', animOut);
+    rectoClass.style.setProperty('--animate-duration', '1s');
+    rectoClass.addEventListener('animationend', () => {
+      versoClass.style.display = 'inline-block'
+      rectoClass.style.display = 'none'
+      versoClass.classList.add('animate__animated', animIn);
+      versoClass.style.setProperty('--animate-duration', '1s');
+    });
+  });
+}
+//Animation TodoListe
+animationprojets('.todo1', '.todo2', 'animate__bounceOut', 'animate__bounceIn')
+//Animation Le café de la place
+animationprojets('.cafe', '.cafe2', 'animate__flipOutY', 'animate__flipInY')
+animationprojets('.matrix1', '.matrix2', 'animate__zoomOut', 'animate__zoomIn')
