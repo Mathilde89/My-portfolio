@@ -6,6 +6,7 @@
 body {
   margin: 0;
   font-family: "Tenor Sans", sans-serif;
+  scroll-behavior: smooth;
 }
 
 nav {
@@ -211,6 +212,7 @@ button {
   justify-content: center;
   align-items: center;
   background-color: #FFFFFF;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
 button:after {
@@ -237,15 +239,18 @@ button:hover:after {
   padding: 10px 30px;
 }
 
-.block1, .block2 {
+.block1, .block2, .block3 {
   display: flex;
   flex-direction: column;
-  padding-left: 100px;
+  padding-left: 7em;
 }
-.block1 p, .block2 p {
-  margin-bottom: 10px;
+.block1 p, .block2 p, .block3 p {
+  margin-bottom: 1.5em;
 }
-.block1 h5, .block2 h5 {
+.block1 p i, .block2 p i, .block3 p i {
+  margin-left: 2em;
+}
+.block1 h5, .block2 h5, .block3 h5 {
   margin-bottom: 0px;
 }
 
@@ -260,4 +265,29 @@ button:hover:after {
 
 #bggreen {
   background-color: #078759;
+}
+
+.cv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#parcours p {
+  padding: 1em 10em 1em 10em;
+  text-justify: distribute;
+  text-align: justify;
+}
+#parcours .envoibut {
+  justify-content: center;
+  width: 15em;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.liens div:nth-of-type(1) {
+  width: 13em;
+}
+.liens div:nth-of-type(2) {
+  width: 12em;
 }/*# sourceMappingURL=style.css.map */

@@ -11,12 +11,13 @@ $colorgreydark: #393839;
 * {
     box-sizing: border-box;
     scroll-behavior: smooth;
-
+    
 }
 
 body {
     margin: 0;
     font-family: 'Tenor Sans', sans-serif;
+    scroll-behavior: smooth;
 }
 
 nav {
@@ -266,6 +267,7 @@ button{
     justify-content: center;
     align-items: center;
     background-color: $colorwhite;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
    
     
 }
@@ -295,13 +297,16 @@ button:hover:after {
     }
 }
 
-.block1, .block2{
+.block1, .block2, .block3{
     display: flex;
     flex-direction: column;
-    padding-left: 100px ;
+    padding-left: 7em ;
     
     p{
-        margin-bottom: 10px;
+        margin-bottom: 1.5em;
+        i{
+            margin-left: 2em;
+        }
     
     
     }
@@ -333,3 +338,33 @@ button:hover:after {
 //     transform: translateY(0);
 //     opacity: 1;
 //   }
+.cv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+#parcours{
+  
+
+    p{
+        padding: 1em 10em 1em 10em;
+        text-justify: distribute;
+        text-align: justify;
+    }
+    .envoibut{
+        justify-content: center;
+        width: 15em;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    }
+}
+.liens{
+    div:nth-of-type(1){
+        width: 13em;
+    }
+    div:nth-of-type(2){
+        width: 12em;
+    }
+    
+}

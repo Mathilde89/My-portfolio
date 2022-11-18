@@ -100,4 +100,25 @@ function animationprojets(class1, class2, animOut, animIn) {
 animationprojets('.todo1', '.todo2', 'animate__bounceOut', 'animate__bounceIn')
 //Animation Le café de la place
 animationprojets('.cafe', '.cafe2', 'animate__flipOutY', 'animate__flipInY')
+//Animation Matrix
 animationprojets('.matrix1', '.matrix2', 'animate__zoomOut', 'animate__zoomIn')
+
+//Display CV
+const cv = document.querySelector("embed");
+const parcours = document.querySelector("#parcours");
+const buttonCv = parcours.querySelector("button");
+cv.style.display = 'none'
+let bool=false;
+
+buttonCv.addEventListener('click', ()=> {
+  if(bool){
+    cv.style.display = 'none'
+    bool=false;
+    
+  } else{
+    cv.style.display = 'inline-block'
+    bool=true;
+
+  }
+
+})
