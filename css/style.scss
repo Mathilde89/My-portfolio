@@ -11,6 +11,7 @@ $colorgreydark: #393839;
 * {
     box-sizing: border-box;
     scroll-behavior: smooth;
+    scroll-margin-block-end: 200px;
     
 }
 
@@ -122,13 +123,15 @@ a {
         // margin: 50px ;
 
         div {
-            width: 230px;
-            height: 230px;
-            border: 15px solid $colorgreylight;
+            // width: 230px;
+            // height: 230px;
+            margin: 15px;
             display: flex;
             flex-direction: column;
             justify-content:center;
             align-items: center;
+            
+           
            
 
 
@@ -160,22 +163,72 @@ a {
         background-image: url(/images/photoprofil.jpg);
         background-position: center;
         background-size: cover;  
+        width: 230px;
+        height: 230px;
     
+    }
+    .cafe1, .todo1, .matrix1, .food1, .air1{
+        cursor: pointer;
     }
     .cafe2{
         background-image: url(/images/cafe.jpg);
         background-position: center;
         background-size: cover;  
+        
+        i{
+            display: flex;
+            padding: 1em;
+            color: $colorpink;
+            justify-content: end;
+        }
     }
     .todo2{
         background-image: url(/images/todo.jpg);
         background-position:center;
         background-size: cover;  
+        
+        i{
+            display: flex;
+            padding: 1em;
+            color: $colorpink;
+            justify-content: end;
+        }
     }
     .matrix2{
         background-image: url(/images/Matrix.jpg);
         background-position:center;
         background-size: cover;  
+        
+        i{
+            display: flex;
+            padding: 1em;
+            color: $colorpink;
+            justify-content: end;
+        }
+    }
+    .food2{
+        background-image: url(/images/Matrix.jpg);
+        background-position:center;
+        background-size: cover;  
+        
+        i{
+            display: flex;
+            padding: 1em;
+            color: $colorpink;
+            justify-content: end;
+        }
+    }
+    .air2{
+        background-image: url(/images/Matrix.jpg);
+        background-position:center;
+        background-size: cover;  
+        
+        i{
+            display: flex;
+            padding: 1em;
+            color: $colorpink;
+            justify-content: end;
+        }
     }
 
 }
@@ -301,10 +354,20 @@ button:hover:after {
     display: flex;
     flex-direction: column;
     padding-left: 7em ;
+    a{
+        display:block;
+        width:fit-content;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+        margin-left: 1em;
+    
+    }
     
     p{
         margin-bottom: 1.5em;
+        display: flex;
+        flex-direction: row;
         i{
+            margin-right: 1em;
             margin-left: 2em;
         }
     
@@ -325,6 +388,9 @@ button:hover:after {
 }
 #bggreen{
     background-color: $colorgreen;
+}
+#bgblue{
+    background-color: $colorlogobleu;
 }
 
 // .reveal {
@@ -366,5 +432,24 @@ button:hover:after {
     div:nth-of-type(2){
         width: 12em;
     }
+    
+}
+
+#competences, #parcours, #contact{
+    padding-top: 2em;
+   
+}
+
+.modal{
+    position: fixed;
+    top: 15%;
+    left: 25%;
+    z-index: 99;
+    cursor: default;
+   
+}
+.animate__animated{
+    width: 230px;
+    height: 230px;
     
 }

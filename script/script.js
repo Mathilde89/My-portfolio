@@ -79,11 +79,19 @@ reveal();
 //Animation les projets
 
 //Fontion animation des projets
-function animationprojets(class1, class2, animOut, animIn) {
+function animationprojets(class1, class2, class3, animOut, animIn) {
   const rectoClass = document.querySelector(class1);
   const versoClass = document.querySelector(class2)
+  const inu3Class = document.querySelector(class3)
+  const acceuil=document.querySelector("#acceuil")
+  const iconeClose= versoClass.querySelector("i")
+  versoClass.style.height = "230px"
+  versoClass.style.width = "230px"
+  rectoClass.style.height = "230px"
+  rectoClass.style.width = "230px"
 
   versoClass.style.display = 'none'
+  inu3Class.style.display = 'none'
   rectoClass.addEventListener('mouseenter', () => {
 
     rectoClass.classList.add('animate__animated', animOut);
@@ -93,15 +101,45 @@ function animationprojets(class1, class2, animOut, animIn) {
       rectoClass.style.display = 'none'
       versoClass.classList.add('animate__animated', animIn);
       versoClass.style.setProperty('--animate-duration', '1s');
+
+          versoClass.addEventListener('animationend', () => {
+          // versoClass.addEventListener('click', () => {
+                      
+            inu3Class.style.display = 'inline-block'
+            inu3Class.style.width = "230px"
+            inu3Class.style.height = "230px"
+            versoClass.classList.add("modal");
+            versoClass.style.width = "550px"
+            versoClass.style.height = "550px"
+            iconeClose.style.fontSize= "25px"
+            console.log("clickdiv")
+            
+            iconeClose.addEventListener('click', () => {
+              console.log("click icone")
+              versoClass.classList.remove("modal");
+              versoClass.style.height = "230px"
+              versoClass.style.width = "230px"
+              inu3Class.style.display = 'none'
+              console.log("coucou")
+              
+            // })
+          
+          })
+         
+        });
+         
     });
   });
 }
 //Animation TodoListe
-animationprojets('.todo1', '.todo2', 'animate__bounceOut', 'animate__bounceIn')
+animationprojets('.todo1', '.todo2', '.todo3', 'animate__bounceOut', 'animate__bounceIn')
 //Animation Le café de la place
-animationprojets('.cafe', '.cafe2', 'animate__flipOutY', 'animate__flipInY')
+animationprojets('.cafe1', '.cafe2', '.cafe3', 'animate__flipOutY', 'animate__flipInY')
 //Animation Matrix
-animationprojets('.matrix1', '.matrix2', 'animate__zoomOut', 'animate__zoomIn')
+animationprojets('.matrix1', '.matrix2', '.matrix3', 'animate__zoomOut', 'animate__zoomIn')
+animationprojets('.food1', '.food2', '.food3', 'animate__zoomOut', 'animate__zoomIn')
+animationprojets('.air1', '.air2', '.air3', 'animate__zoomOut', 'animate__zoomIn')
+
 
 //Display CV
 const cv = document.querySelector("embed");
@@ -122,3 +160,5 @@ buttonCv.addEventListener('click', ()=> {
   }
 
 })
+
+

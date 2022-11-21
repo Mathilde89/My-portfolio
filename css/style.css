@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
+  scroll-margin-block-end: 200px;
 }
 
 body {
@@ -94,9 +95,7 @@ a {
   flex-direction: row;
 }
 .container div div {
-  width: 230px;
-  height: 230px;
-  border: 15px solid #F5F5F5;
+  margin: 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -122,21 +121,66 @@ a {
   background-image: url(/images/photoprofil.jpg);
   background-position: center;
   background-size: cover;
+  width: 230px;
+  height: 230px;
+}
+.container .cafe1, .container .todo1, .container .matrix1, .container .food1, .container .air1 {
+  cursor: pointer;
 }
 .container .cafe2 {
   background-image: url(/images/cafe.jpg);
   background-position: center;
   background-size: cover;
 }
+.container .cafe2 i {
+  display: flex;
+  padding: 1em;
+  color: #BC0735;
+  justify-content: end;
+}
 .container .todo2 {
   background-image: url(/images/todo.jpg);
   background-position: center;
   background-size: cover;
 }
+.container .todo2 i {
+  display: flex;
+  padding: 1em;
+  color: #BC0735;
+  justify-content: end;
+}
 .container .matrix2 {
   background-image: url(/images/Matrix.jpg);
   background-position: center;
   background-size: cover;
+}
+.container .matrix2 i {
+  display: flex;
+  padding: 1em;
+  color: #BC0735;
+  justify-content: end;
+}
+.container .food2 {
+  background-image: url(/images/Matrix.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.container .food2 i {
+  display: flex;
+  padding: 1em;
+  color: #BC0735;
+  justify-content: end;
+}
+.container .air2 {
+  background-image: url(/images/Matrix.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.container .air2 i {
+  display: flex;
+  padding: 1em;
+  color: #BC0735;
+  justify-content: end;
 }
 
 #vba {
@@ -244,10 +288,21 @@ button:hover:after {
   flex-direction: column;
   padding-left: 7em;
 }
+.block1 a, .block2 a, .block3 a {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  margin-left: 1em;
+}
 .block1 p, .block2 p, .block3 p {
   margin-bottom: 1.5em;
+  display: flex;
+  flex-direction: row;
 }
 .block1 p i, .block2 p i, .block3 p i {
+  margin-right: 1em;
   margin-left: 2em;
 }
 .block1 h5, .block2 h5, .block3 h5 {
@@ -265,6 +320,10 @@ button:hover:after {
 
 #bggreen {
   background-color: #078759;
+}
+
+#bgblue {
+  background-color: #62B6AA;
 }
 
 .cv {
@@ -290,4 +349,21 @@ button:hover:after {
 }
 .liens div:nth-of-type(2) {
   width: 12em;
+}
+
+#competences, #parcours, #contact {
+  padding-top: 2em;
+}
+
+.modal {
+  position: fixed;
+  top: 15%;
+  left: 25%;
+  z-index: 99;
+  cursor: default;
+}
+
+.animate__animated {
+  width: 230px;
+  height: 230px;
 }/*# sourceMappingURL=style.css.map */
